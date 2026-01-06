@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-background: #1b3c53;
+  --section-background: #234c6a;
+  --secondary-ui-elements: #456882;
+  --text-light-backgrounds: #e3e3e3;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--primary-background);
+  color: var(--text-light-backgrounds);
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 52px;
+  border-bottom: 2px solid var(--secondary-ui-elements);
+}
+
+.resume {
+  color: var(--secondary-ui-elements);
+}
+
+.resume:hover {
+  color: var(--text-light-backgrounds);
+  cursor: pointer;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 32px;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  margin: 40px 0;
+  padding: 0 52px;
+}
+
+.image_box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.hero_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.image_box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #1b3c53;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.text_box {
+  flex: 1;
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+}
+
+.available_state {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: var(--text-light-backgrounds);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.circle {
+  background-color: green;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.hero-container p {
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.btn {
+  color: var(--text-light-backgrounds);
+  font-size: 20px;
+  padding: 16px 24px;
+  border-radius: 16px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  width: 55%;
+}
+
+.btn-1 {
+  background-color: var(--secondary-ui-elements);
+  border: 1px solid var(--primary-background);
+}
+
+.btn-2 {
+  background-color: transparent;
+  border: 1px solid var(--text-light-backgrounds);
+}
