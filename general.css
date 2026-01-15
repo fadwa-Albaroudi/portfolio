@@ -70,6 +70,10 @@ Medium: 11px
   --text-light-backgrounds: #e3e3e3;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--primary-background);

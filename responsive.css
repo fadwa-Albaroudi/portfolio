@@ -1,0 +1,19 @@
+/* @media (max-width: 768px) { } Mobile @media (max-width: 640px) {} /* */
+/* Ta @media (min-width: 641px) and (max-width: 1024px) {} Laptop blet */
+/* @media (min-width: 1025px) and (max-width: 1280px) {} Desktop @media
+/* (min-width: 1281px) {} */
+
+@media (max-width: 640px) {
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .image_box {
+    height: 300px;
+  }
+
+  .available_state {
+    width: 55%;
+    font-size: 12px;
+  }
+}
