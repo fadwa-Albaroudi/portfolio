@@ -70,6 +70,13 @@ Medium: 11px
   --text-light-backgrounds: #e3e3e3;
 }
 
+.light-theme {
+  --primary-background: #f8fafc;
+  --section-background: #d9eafd;
+  --secondary-ui-elements: #9aa6b2;
+  --text-light-backgrounds: #0f172a;
+}
+
 html {
   scroll-behavior: smooth;
 }

@@ -1,5 +1,5 @@
 /* ********************** */
-/* Header */
+/* der */
 /* ********************** */
 
 .nav-bar {
@@ -9,6 +9,24 @@
   padding: 20px 52px;
   max-width: 1200px;
   border-bottom: 2px solid var(--secondary-ui-elements);
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--secondary-ui-elements);
+  color: var(--text-light-backgrounds);
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--secondary-ui-elements);
+  color: var(--primary-background);
 }
 
 .resume {
@@ -233,7 +251,7 @@
 /* ********************** */
 
 .section-selected--container {
-  padding: 32px;
+  padding: 24px 0;
 }
 
 .selected-work-cards--container {

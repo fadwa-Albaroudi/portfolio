@@ -13,18 +13,28 @@
     />
     <title>Portfolio | Fadwa Al-baroudi</title>
   </head>
+  
   <body>
     <header>
       <nav class="nav-bar container">
         <div class="logo">Fadwa Al-baroudi</div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+  <i class="fa-solid fa-sun"></i>
+</button>
+
         <a class="resume" href="google.dirve.com" target="_blank">
           Resume
           <i class="fa fa-download resume"></i>
+
+          
         </a>
       </nav>
+
+
     </header>
 
-      <section class="hero-container container">
+      <section class=" container">
+        <div class="hero-container">
         <div class="image_box">
           <img src="picture/picture.jpg" alt="code photo" class="hero_image" />
         </div>
@@ -38,8 +48,8 @@
             <h1 class="hero-text">Frontend Developer</h1>
 
             <p>
-             I build responsive websites with clean code and a strong focus on usability
-            </p>
+             Providing modern, ready-to-launch portfolio solutions designed for efficiency and impact
+             </p>
             <div class="btn-container">
               <button class="btn btn-1">
                 <a href="#selected-work">
@@ -49,9 +59,11 @@
                 </a>
                 </button>
               <button class="btn btn-2">
-                <a href="#contact-us">Contact Me</button></a>
+                <a href="#contact-us">Contact Me</a>
+              </button>
             </div>
           </div>
+        </div>
         </div>
       </section>
    
@@ -64,20 +76,11 @@
             <h2>About Me</h2>
           </div>
           <p class="about-text about-text-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit Adipisci
-            accusamus facilis consequuntur mollitia doloremque nemo? Aperiam
-            nesciunt aspernatur quibusdam porro accusamus facilis consequuntur
-            mollitia doloremque nemo Aperiam nesciunt aspernatur quibusdam porro
-            mollitia doloremque nemo Aperiam nesciunt aspernatur quibusdam
-            porro!
-          </p>
+            I'm Fadwa Al-Baroudi, an IT graduate with a foundation in information technology.
+            After graduation, I discovered my passion for front-end development and started creating clean, responsive websites using HTML and CSS
           <p class="about-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit Adipisci
-            accusamus facilis consequuntur mollitia doloremque nemo Aperiam
-            nesciunt aspernatur quibusdam porro accusamus facilis consequuntur
-            mollitia doloremque nemo? Aperiam nesciunt aspernatur quibusdam
-            porro mollitia doloremque nemo Aperiam nesciunt aspernatur quibusdam
-            porro!
+           I focus on designing simple, user-friendly interfaces with attention to detail
+           My goal is to deliver practical and visually appealing projects that offer a seamless user experience
           </p>
           <div class="about-cards">
             <div class="about-inner--cards">
@@ -99,8 +102,8 @@
           <div class="my-service--text">
             <h2>My services</h2>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing saepe
-              laboriosam.
+              <strong>Ready-to-Use Portfolio Templates</strong>
+              Select one of the three ready-made templates, provide your info, and get a professional website ready to go
             </p>
           </div>
           <div class="my-service-cards--container">
@@ -108,11 +111,9 @@
               <div class="cards-icons">
                 <i class="fa-solid fa-mobile cards--icons"></i>
               </div>
-              <h4 class="service-cards--title">Moblie Develobment</h4>
+              <h4 class="service-cards--title">Starter Portfolio </h4>
               <p class="servecs-cards--description">
-                Lorem ipsum, dolor sit amet consectet alias facilis blanditiis
-                Lorem ipsum, dolor sit amet consectetur alias facilis
-                blanditiis.
+                A simple, clean template for personal use. Just provide your info, and I’ll customize it for you
               </p>
             </div>
 
@@ -120,11 +121,9 @@
               <div class="cards-icons">
                 <i class="fa-solid fa-paintbrush"></i>
               </div>
-              <h4 class="service-cards--title">UI implemetation</h4>
+              <h4 class="service-cards--title">Professional Portfolio</h4>
               <p class="servecs-cards--description">
-                Lorem ipsum, dolor sit amet consectetur alias facilis blanditiis
-                Lorem ipsum, dolor sit amet consectetur alias facilis
-                blanditiis.
+                A detailed template with sections for skills, projects, and experience. Ready to launch after adding your information
               </p>
             </div>
 
@@ -132,11 +131,9 @@
               <div class="cards-icons">
                 <i class="fa-solid fa-gauge-high"></i>
               </div>
-              <h4 class="service-cards--title">Performance</h4>
+              <h4 class="service-cards--title">Creative Portfolio</h4>
               <p class="servecs-cards--description">
-                Lorem ipsum, dolor sit amet consectetur alias facilis blanditiis
-                Lorem ipsum, dolor sit amet consectetur alias facilis
-                blanditiis.
+              An innovative, modern design for those who want a unique online presence. Personal info gets integrated seamlessly
               </p>
             </div>
           </div>
@@ -204,8 +201,8 @@
         <div class="Contact-container">
           <div class="contact-text--box">
             <h3 class="contact-title">Let's Talk</h3>
-            <p class="contact-subtitle">Have a projecr in mind? Let's biuld</p>
-            <p class="contact-subtitle">Something amazing together  </p>
+            <p class="contact-subtitle">Have a project in mind or want a ready-made portfolio? </p>
+            <p class="contact-subtitle">Send me your details and I'll get back to you!  </p>
           </div>
 
           <div class="contact-form--box">
@@ -214,7 +211,7 @@
  
             <input class="contact-input" type="text" placeholder= "Name" required>
             <input class="contact-input" type="text" placeholder="Email" required>
-            <textarea class="contact-textarea" placeholder="How can I help?" required></textarea>
+            <textarea class="contact-textarea" placeholder="" required></textarea>
 
             <button class="contact-botton" type="submit">send</button>
           </form>
@@ -222,5 +219,27 @@
         </div>
       </div>
     </section>
+
+    <script>
+  const toggleBtn = document.querySelector(".theme-toggle");
+  const body = document.body;
+  const icon = toggleBtn.querySelector("i");
+
+  if (localStorage.getItem("theme") === "light") {
+    body.classList.add("light-theme");
+    icon.classList.replace("fa-sun", "fa-moon");
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("light-theme");
+
+    const isLight = body.classList.contains("light-theme");
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+
+    icon.classList.toggle("fa-sun", !isLight);
+    icon.classList.toggle("fa-moon", isLight);
+  });
+</script>
+
   </body>
 </html>
